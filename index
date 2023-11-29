@@ -1,0 +1,29 @@
+import java.util.Random;
+
+public class RandomJokeGenerator {
+    public static void main(String[] args) {
+        System.out.println("Random Joke Generator");
+
+        // Array of sample jokes
+        String[] jokes = {
+            "Why don't scientists trust atoms? Because they make up everything!",
+            "Parallel lines have so much in common. It's a shame they'll never meet.",
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "I told my wife she should embrace her mistakes. She gave me a hug.",
+            "What do you call fake spaghetti? An impasta!"
+        };
+
+        // Select a random joke
+        String randomJoke = getRandomElement(jokes);
+
+        // Display the random joke
+        System.out.println("\n" + randomJoke);
+    }
+
+    // Function to get a random element from an array
+    private static String getRandomElement(String[] array) {
+        Random random = new Random();
+        int randomIndex = random.nextInt(array.length);
+        return array[randomIndex];
+    }
+}
